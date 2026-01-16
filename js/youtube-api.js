@@ -2,7 +2,7 @@
 // Fetches real-time subscriber count and latest videos from lovetalkies channel
 
 const YOUTUBE_API_KEY = 'AIzaSyCmzahOHOe2J5T_wrWCyef_utCcRxrdSoA';
-const CHANNEL_ID = 'UCwSxPLb-R4VtZd4pFSeYLqg'; // lovetalkies channel ID
+const CHANNEL_ID = 'UCyC2LTYDZIQMjBBfZ5hXLsA'; // lovetalkies channel ID (corrected)
 
 // Format large numbers (e.g., 5130 -> "5.1K")
 function formatCount(count) {
