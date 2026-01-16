@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Submit your original story to The Creators Room. Get your work narrated on lovetalkies YouTube channel.">
+
+    <title>Submit Your Story | The Creators Room</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav__logo">
+            <span class="nav__logo-icon">✦</span>
+            The Creators Room
+        </a>
+        <button class="nav__menu-btn">Menu</button>
+    </nav>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay">
+        <button class="menu-overlay__close">✕</button>
+        <div class="menu-overlay__content">
+            <ul class="menu-overlay__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="daily-read.html">Daily Story</a></li>
+                <li><a href="submit.html">Submit Story</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="page-header__content">
+            <span class="page-header__tag">Submissions Open</span>
+            <h1 style="font-size: clamp(2rem, 4vw, 3.5rem);">Submit Your Story</h1>
+            <p style="color: var(--text-secondary); margin-top: 1rem; max-width: 500px;">
+                Share your original work with our community. Selected stories will be
+                narrated on lovetalkies YouTube channel with 5K+ subscribers.
+            </p>
+        </div>
+    </header>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="form-container">
+            <!-- Guidelines -->
+            <div class="guidelines-card reveal">
+                <h3 class="guidelines-card__title">
+                    <span style="color: var(--accent-primary);">✦</span>
+                    Submission Guidelines
+                </h3>
+                <ul class="guidelines-card__list">
+                    <li><strong>Word Count:</strong> 500 - 1,000 words (5-8 minute narration)</li>
+                    <li><strong>Original Work:</strong> Must be your own creation</li>
+                    <li><strong>Genres:</strong> Romance, Drama, Family, Emotional stories preferred</li>
+                    <li><strong>Language:</strong> Telugu or English stories welcome</li>
+                    <li><strong>Response:</strong> Selected authors notified within 7 days</li>
+                </ul>
+            </div>
+
+            <!-- Form -->
+            <form id="submission-form" action="https://formspree.io/f/mnjjjndn" method="POST">
+                <div id="submission-form-container">
+                    <!-- Author Name -->
+                    <div class="form-group reveal">
+                        <label class="form-label" for="author-name">
+                            Author Name / Pseudonym <span>*</span>
+                        </label>
+                        <input type="text" id="author-name" name="author_name" class="form-input"
+                            placeholder="How would you like to be credited?" required>
+                        <p class="form-hint">This name will appear in the video credits on lovetalkies</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group reveal">
+                        <label class="form-label" for="email">
+                            Email Address
+                        </label>
+                        <input type="email" id="email" name="email" class="form-input"
+                            placeholder="your@email.com (optional)">
+                        <p class="form-hint">We'll notify you if your story is selected</p>
+                    </div>
+
+                    <!-- Story Title -->
+                    <div class="form-group reveal">
+                        <label class="form-label" for="story-title">
+                            Story Title <span>*</span>
+                        </label>
+                        <input type="text" id="story-title" name="story_title" class="form-input"
+                            placeholder="Enter your story title" required>
+                    </div>
+
+                    <!-- Genre -->
+                    <div class="form-group reveal">
+                        <label class="form-label" for="genre">
+                            Genre <span>*</span>
+                        </label>
+                        <select id="genre" name="genre" class="form-select" required>
+                            <option value="" disabled selected>Select a genre</option>
+                            <option value="Romance / Love Story">💕 Romance / Love Story</option>
+                            <option value="Drama">🎭 Drama</option>
+                            <option value="Family Drama">👨‍👩‍👧 Family Drama</option>
+                            <option value="Emotional / Heart-touching">💔 Emotional / Heart-touching</option>
+                            <option value="Feel Good">☀️ Feel Good</option>
+                            <option value="Thriller">😰 Thriller</option>
+                            <option value="Mystery">🔍 Mystery</option>
+                            <option value="Fantasy">🧙 Fantasy</option>
+                            <option value="Comedy">😂 Comedy</option>
+                            <option value="Revenge Drama">⚔️ Revenge Drama</option>
+                            <option value="Friendship">🤝 Friendship</option>
+                            <option value="Life Lessons">📚 Life Lessons</option>
+                            <option value="Supernatural">👻 Supernatural</option>
+                            <option value="Slice of Life">☕ Slice of Life</option>
+                            <option value="Inspirational">✨ Inspirational</option>
+                            <option value="Other">📝 Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Story Content -->
+                    <div class="form-group reveal">
+                        <label class="form-label" for="story-content">
+                            Your Story <span>*</span>
+                        </label>
+                        <textarea id="story-content" name="story_content" class="form-textarea" placeholder="Begin your story here...
+
+Start with something that hooks the listener. Draw them into your world from the very first sentence.
+
+For Telugu stories, you can write in Telugu or English transliteration.
+
+Every word counts. Make them all meaningful." required></textarea>
+                        <div class="word-counter">
+                            <span class="form-hint">Target: 500-1000 words</span>
+                            <span class="word-counter__count">0 / 1000</span>
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="form-group reveal">
+                        <label class="form-label" for="notes">
+                            Notes for the Narrator
+                        </label>
+                        <textarea id="notes" name="narrator_notes" class="form-textarea" style="min-height: 120px;"
+                            placeholder="Any specific pronunciation guides, mood suggestions, or background context? (Optional)"></textarea>
+                    </div>
+
+                    <!-- Consent -->
+                    <div class="form-group reveal">
+                        <label class="form-checkbox">
+                            <input type="checkbox" id="consent" name="consent" value="Yes, I agree" required>
+                            <span style="color: var(--text-secondary);">
+                                I confirm this is my original work and I grant <strong
+                                    style="color: var(--text-primary);">The Creators Room / lovetalkies</strong>
+                                permission to narrate this story on their YouTube channel. I understand I will
+                                receive full author credit but no monetary compensation. <span
+                                    style="color: var(--accent-primary);">*</span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="form-group reveal">
+                        <label class="form-checkbox">
+                            <input type="checkbox" id="newsletter" name="newsletter" value="Yes">
+                            <span style="color: var(--text-secondary);">
+                                Subscribe to our newsletter for writing tips and updates
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Honeypot for spam prevention -->
+                    <input type="text" name="_gotcha" style="display: none;">
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn btn--primary btn--large reveal"
+                        style="width: 100%; justify-content: center; margin-top: 2rem;">
+                        Submit My Story
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div class="success-message" id="success-message"
+                style="display: none; text-align: center; padding: 4rem 2rem;">
+                <div style="font-size: 5rem; margin-bottom: 1.5rem;">✨</div>
+                <h2 style="margin-bottom: 1rem;">Story Submitted!</h2>
+                <p style="color: var(--text-secondary); max-width: 400px; margin: 0 auto 2rem;">
+                    Thank you for sharing your story. We review all submissions personally
+                    and will reach out if your story is selected for lovetalkies.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html" class="btn btn--secondary">Back Home</a>
+                    <a href="https://youtube.com/@lovetalkiesaudio" target="_blank" class="btn btn--primary">Watch on
+                        YouTube</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="process-section" style="background: var(--bg-secondary);">
+        <div class="process-section__header reveal">
+            <span class="tech-label">Pro Tips</span>
+            <h2>Writing for Audio</h2>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-card reveal">
+                <span class="process-card__number">01</span>
+                <div class="process-card__icon">🎣</div>
+                <h3 class="process-card__title">Hook Early</h3>
+                <p class="process-card__text">
+                    Start with emotion or conflict. You have 30 seconds to capture attention.
+                </p>
+            </div>
+
+            <div class="process-card reveal">
+                <span class="process-card__number">02</span>
+                <div class="process-card__icon">💔</div>
+                <h3 class="process-card__title">Emotional Depth</h3>
+                <p class="process-card__text">
+                    Our listeners love heart-touching moments. Make them feel something real.
+                </p>
+            </div>
+
+            <div class="process-card reveal">
+                <span class="process-card__number">03</span>
+                <div class="process-card__icon">🔊</div>
+                <h3 class="process-card__title">Read Aloud</h3>
+                <p class="process-card__text">
+                    Sentences that flow naturally when spoken make for better narrations.
+                </p>
+            </div>
+
+            <div class="process-card reveal">
+                <span class="process-card__number">04</span>
+                <div class="process-card__icon">💥</div>
+                <h3 class="process-card__title">End Strong</h3>
+                <p class="process-card__text">
+                    A twist, emotional punch, or satisfying resolution makes stories memorable.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__brand">
+                <span class="nav__logo-icon" style="width: 24px; height: 24px; font-size: 0.8rem;">✦</span>
+                <span class="footer__logo">The Creators Room</span>
+            </div>
+
+            <div class="footer__links">
+                <a href="index.html" class="footer__link">Home</a>
+                <a href="daily-read.html" class="footer__link">Daily Story</a>
+                <a href="submit.html" class="footer__link">Submit</a>
+                <a href="about.html" class="footer__link">About</a>
+            </div>
+
+            <div class="footer__social">
+                <a href="https://youtube.com/@lovetalkiesaudio" target="_blank" aria-label="YouTube">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <p class="footer__copyright">
+            © 2026 The Creators Room | lovetalkies. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Form submission handling
+        const form = document.getElementById('submission-form');
+        const formContainer = document.getElementById('submission-form-container');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', function (e) {
+            const storyContent = document.getElementById('story-content').value.trim();
+            const wordCount = storyContent ? storyContent.split(/\s+/).length : 0;
+
+            if (wordCount < 100) {
+                e.preventDefault();
+                alert('Your story should be at least 100 words. Currently: ' + wordCount + ' words.');
+                return false;
+            }
+
+            if (wordCount > 1500) {
+                e.preventDefault();
+                alert('Your story should be under 1000 words. Currently: ' + wordCount + ' words.');
+                return false;
+            }
+
+            // Show success message after form submits
+            form.addEventListener('submit', function () {
+                setTimeout(() => {
+                    formContainer.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 100);
+            });
+        });
+    </script>
+</body>
+
+</html>
