@@ -69,7 +69,7 @@
                     Submission Guidelines
                 </h3>
                 <ul class="guidelines-card__list">
-                    <li><strong>Word Count:</strong> 500 - 1,000 words (5-8 minute narration)</li>
+                    <li><strong>Word Count:</strong> 1,000 - 2,000 words (8-15 minute narration)</li>
                     <li><strong>Original Work:</strong> Must be your own creation</li>
                     <li><strong>Genres:</strong> Romance, Drama, Family, Emotional stories preferred</li>
                     <li><strong>Language:</strong> Telugu or English stories welcome</li>
@@ -98,6 +98,16 @@
                         <input type="email" id="email" name="email" class="form-input"
                             placeholder="your@email.com (optional)">
                         <p class="form-hint">We'll notify you if your story is selected</p>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-group reveal">
+                        <label class="form-label" for="phone">
+                            Phone Number
+                        </label>
+                        <input type="tel" id="phone" name="phone_number" class="form-input"
+                            placeholder="+91 XXXXX XXXXX (optional)">
+                        <p class="form-hint">For WhatsApp contact (optional)</p>
                     </div>
 
                     <!-- Story Title -->
@@ -148,8 +158,8 @@ For Telugu stories, you can write in Telugu or English transliteration.
 
 Every word counts. Make them all meaningful." required></textarea>
                         <div class="word-counter">
-                            <span class="form-hint">Target: 500-1000 words</span>
-                            <span class="word-counter__count">0 / 1000</span>
+                            <span class="form-hint">Required: 1000-2000 words</span>
+                            <span class="word-counter__count">0 / 2000</span>
                         </div>
                     </div>
 
@@ -314,13 +324,13 @@ Every word counts. Make them all meaningful." required></textarea>
             const storyContent = document.getElementById('story-content').value.trim();
             const wordCount = storyContent ? storyContent.split(/\s+/).length : 0;
 
-            if (wordCount < 10) {
-                alert('Your story should be at least 10 words. Currently: ' + wordCount + ' words.');
+            if (wordCount < 1000) {
+                alert('Your story should be at least 1000 words. Currently: ' + wordCount + ' words.');
                 return false;
             }
 
             if (wordCount > 2000) {
-                alert('Your story is too long. Please keep it under 1500 words. Currently: ' + wordCount + ' words.');
+                alert('Your story is too long. Please keep it under 2000 words. Currently: ' + wordCount + ' words.');
                 return false;
             }
 
